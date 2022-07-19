@@ -62,6 +62,11 @@ class BinarySearchTree:
                 queue.append(current_node.right)
         return results
 
+    ## pre-order: root, left, right
+    ## root is checked PRE/BEFORE the left and right nodes
+    ##      1 - root
+    ##       /      \
+    ##  2- left   3 - right
     def dfs_pre_order(self):
         results = []
         
@@ -75,6 +80,11 @@ class BinarySearchTree:
         traverse(self.root) ## this kicks off the traverse function -- this is the starting place
         return results
 
+    ## post-order: left, right, root
+    ## root is checked POST/AFTER left and right nodes
+    ##      3 - root
+    ##       /      \
+    ##  1- left   2 - right
     def dfs_post_order(self):
         results = []
 
@@ -88,6 +98,11 @@ class BinarySearchTree:
         traverse(self.root)
         return results
 
+    ## in-order: left, root, right
+    ## root is checked in order of left node, root, and then right node
+    ##      2 - root
+    ##       /      \
+    ##  1- left   3 - right
     def dfs_in_order(self):
         results = []
 
